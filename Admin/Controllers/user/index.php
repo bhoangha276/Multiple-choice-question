@@ -1,5 +1,5 @@
 <?php
-    include "Model/DBConfig.php";
+    // include "Models/DBConfig.php";
 
     $db = new Database;
     $db->connect();
@@ -27,19 +27,19 @@
                     $success[] = 'add_success';
                 }
             }
-            require_once('View/users/add-user.php');
+            require_once('Views/users/add-user.php');
             break;
         }
         
         // case 'detail': {
 
-        //     require_once('View/users/detail-user.php');
+        //     require_once('Views/users/detail-user.php');
         //     break;
         // }    
 
         // case 'edit': {
 
-        //     require_once('View/users/edit-user.php');
+        //     require_once('Views/users/edit-user.php');
         //     break;
         // }
 
@@ -59,7 +59,7 @@
                     </script>';
                 }
             }
-            // require_once('View/users/delete-user.php');
+            // require_once('Views/users/delete-user.php');
             break;
         }
 
@@ -71,7 +71,7 @@
                 $data_Search = $db->SearchData($tbl, $col, $input);
             }
 
-            require_once('View/users/search-user.php');
+            require_once('Views/users/search-user.php');
             break;
         } 
 
@@ -79,7 +79,7 @@
             $table = "tbl_users";
             $data = $db->getAllData($table);
 
-            require_once('View/users/list-user.php');
+            require_once('Views/users/list-user.php');
             break;
         }
     }

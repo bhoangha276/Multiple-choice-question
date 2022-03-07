@@ -1,5 +1,5 @@
 <?php
-    include "Model/DBConfig.php";
+    // include "Models/DBConfig.php";
 
     $db = new Database;
     $db->connect();
@@ -26,7 +26,7 @@
                     $success[] = 'add_success';
                 }
             }
-                require_once('View/questions/add-question.php');
+                require_once('Views/questions/add-question.php');
                 break;
             }
         
@@ -37,7 +37,7 @@
                 $dataByID = $db->getDataByID($tbl, $id);
             }
 
-                require_once('View/questions/detail-question.php');
+                require_once('Views/questions/detail-question.php');
                 break;
             }    
 
@@ -66,7 +66,7 @@
 
                 }
             }
-                require_once('View/questions/edit-question.php');
+                require_once('Views/questions/edit-question.php');
                 break;
             }
 
@@ -86,7 +86,7 @@
                         </script>';
                     }
                 }
-                // require_once('View/questions/delete-question.php');
+                // require_once('Views/questions/delete-question.php');
                 break;
             }
 
@@ -99,7 +99,7 @@
                     $data_Search = $db->SearchData($tbl, $col, $input);
                 }
 
-                require_once('View/questions/search-question.php');
+                require_once('Views/questions/search-question.php');
                 break;
             } 
 
@@ -107,7 +107,7 @@
                 $table = "tbl_questions";
                 $data = $db->getAllData($table);
 
-                require_once('View/questions/list-question.php');
+                require_once('Views/questions/list-question.php');
                 break;
             }
     }

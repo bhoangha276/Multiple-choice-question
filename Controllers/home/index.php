@@ -1,5 +1,5 @@
 <?php
-    include "Model/DBConfig.php";
+    // include "Models/DBConfig.php";
 
     $db = new Database;
     $db->connect();
@@ -14,36 +14,36 @@
 
     switch ($action) {
         case 'add': {
-            require_once('View/users/add-user.php');
+            require_once('Views/users/add-user.php');
             break;
         }
         
         // case 'detail': {
 
-        //     require_once('View/users/detail-user.php');
+        //     require_once('Views/users/detail-user.php');
         //     break;
         // }    
 
         // case 'edit': {
 
-        //     require_once('View/users/edit-user.php');
+        //     require_once('Views/users/edit-user.php');
         //     break;
         // }
 
         case 'delete': {
-            // require_once('View/users/delete-user.php');
+            // require_once('Views/users/delete-user.php');
             break;
         }
 
         case 'search': {
 
-            require_once('View/users/search-user.php');
+            require_once('Views/users/search-user.php');
             break;
         } 
 
         default: {
 
-            require_once('View/home/index.php');
+            require_once('Views/home/index.php');
             break;
         }
     }

@@ -1,5 +1,5 @@
 <?php
-    include "Model/DBConfig.php";
+    // include "Models/DBConfig.php";
 
     $db = new Database;
     $db->connect();
@@ -15,7 +15,7 @@
     switch ($action) {
         case 'register': {
 
-            require_once('View/login/register.php');
+            require_once('Views/login/register.php');
             break;
         }
 
@@ -26,14 +26,14 @@
 
                 if($db->Login($username, $password)) {
                     $success[] = 'login_success';
-                    header('location: /multiple-choice-quiz/');
+                    header('location: /multiple-choice-question/Admin');
                     // echo '<script type="text/javascript">
-                    // location.replace("/multiple-choice-quiz/");
+                    // location.replace("/multiple-choice-question/");
                     // </script>';
                 }
             }
 
-            require_once('View/login/index.php');
+            require_once('Views/login/index.php');
             break;
         }
     }
