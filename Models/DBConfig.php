@@ -88,7 +88,24 @@
             return $data;
         }
 
-        // GET DATA BY ID
+        // GET ALL DATA BY ID
+        public function getAllDataByID($table1, $table2, $id_user, $id1_1, $id1_2, $id2) {
+            $sql = "SELECT tbl_classes.id, tbl_classes.class_name, tbl_classes.description, FROM $table1, $table2 WHERE $id1_1 = $id_user AND $id1_2 = $id2 ORDER BY id DESC";
+            $this->execute($sql);
+            
+            if($this->num_rows()==0) {
+                $data = 0;
+            }
+            else {
+                while($datas = $this->getData()) {
+                    $data[] = $datas;
+                }
+            }
+
+            return $data;
+        }
+
+        // GET 1 DATA BY ID
         public function getDataByID($table, $id) {
             $sql = "SELECT * FROM $table WHERE id = '$id'";
             $this->execute($sql);
@@ -102,6 +119,7 @@
 
             return $data;
         }
+        
 
         // INSERT
         public function InsertData($table, $params, $values) {

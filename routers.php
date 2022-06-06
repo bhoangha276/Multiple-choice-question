@@ -10,10 +10,10 @@
                 break;
             }
 
-            // case 'class': {
-            //     require_once('Controllers/class/index.php');
-            //     break;
-            // }
+            case 'class': {
+                require_once('Controllers/class/index.php');
+                break;
+            }
 
             // case 'subject': {
             //     require_once('Controllers/subject/index.php');
