@@ -88,9 +88,21 @@
             return $data;
         }
 
-        // GET ALL DATA BY ID
-        public function getAllDataByID($table1, $table2, $id_user, $id1_1, $id1_2, $id2) {
-            $sql = "SELECT tbl_classes.id, tbl_classes.class_name, tbl_classes.description, FROM $table1, $table2 WHERE $id1_1 = $id_user AND $id1_2 = $id2 ORDER BY id DESC";
+        // GET CLASSES BY ID USER
+        public function getClassesByID($id_user) {
+            $sql = 
+            "SELECT
+                tbl_classes.id,
+                tbl_classes.class_name,
+                tbl_classes.description,
+                tbl_classes_users.id_user
+            FROM
+                `tbl_classes`,
+                `tbl_classes_users`
+            WHERE
+                tbl_classes_users.id_user = $id_user AND tbl_classes_users.id_class = tbl_classes.id
+            ORDER BY tbl_classes.id DESC";
+            
             $this->execute($sql);
             
             if($this->num_rows()==0) {
