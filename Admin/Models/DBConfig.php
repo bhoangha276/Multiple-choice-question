@@ -175,6 +175,24 @@
             return $this->execute($sql);
         }
 
+        // INSERT CLASS
+        public function InsertClass($class_name, $description) {
+            $sql = "INSERT INTO tbl_classes(class_name, description)
+            VALUES('$class_name', '$description')";
+            
+            return $this->execute($sql);
+        }
+
+        // UPDATE CLASS
+        public function UpdateClass($id, $class_name, $description) {
+            $sql = "UPDATE tbl_classes
+            SET class_name = '$class_name', description = '$description' 
+            WHERE id = '$id'";
+
+            return $this->execute($sql);
+        }
+
+
         // DELETE
         public function DeleteData($id, $table) {
             $sql = "DELETE FROM $table WHERE id = '$id'";
@@ -198,4 +216,3 @@
             return $data;
         }
     }
-?>
