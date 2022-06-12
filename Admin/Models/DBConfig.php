@@ -191,7 +191,20 @@
 
             return $this->execute($sql);
         }
+        //INSERT SUBJECT
+        public function InsertSubject($id_class, $subject_name, $description) {
+            $sql = "INSERT INTO tbl_subjects(id_class, subject_name, description)
+            VALUES('$id_class', '$subject_name', '$description')";
+            return $this->execute($sql);
+        }
+        //  UPDATE SUBJECT
+        public function UpdateSubject($id, $id_class, $subject_name, $description) {
+            $sql = "UPDATE tbl_subjects 
+            SET id_class = '$id_class', subject_name = '$subject_name', description = '$description'
+            WHERE id = '$id'";
 
+            return $this->execute($sql);
+        }
 
         // DELETE
         public function DeleteData($id, $table) {
