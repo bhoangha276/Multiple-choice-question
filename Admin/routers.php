@@ -20,10 +20,10 @@
 			    break;
 			}
 
-			// case 'exam': {
-			//     require_once('Controllers/exam/index.php');
-			//     break;
-			// }
+			case 'exam': {
+			    require_once('Controllers/exam/index.php');
+			    break;
+			}
 
 		case 'question': {
 				require_once('Controllers/question/index.php');

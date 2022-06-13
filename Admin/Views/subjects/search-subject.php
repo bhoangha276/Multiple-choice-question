@@ -33,7 +33,9 @@
             ?>
                 <tr>
                     <th><?php echo $index++; ?></th>
+                    <td><?php echo $value['id_class']; ?></td>
                     <td><?php echo $value['subject_name']; ?></td>
+                    <td><?php echo $value['description']; ?></td>
                     <td>
                         <a href="index.php?controller=subject&action=detail&id=<?php echo $value['id']; ?>" class="btn btn-sm btn-primary btn-toastr">Detail</a>&nbsp
                         <a href="index.php?controller=subject&action=edit&id=<?php echo $value['id']; ?>" class="btn btn-sm btn-warning btn-toastr">Edit</a>&nbsp

@@ -205,7 +205,22 @@
 
             return $this->execute($sql);
         }
+          
+        // INSERT EXAM
+       
+        public function InsertExam($id_author, $id_subject, $exam_name, $start, $time, $number_question, $create_at) {
+            $sql = "INSERT INTO tbl_subjects(id_author, id_subject, exam_name, start, time, number_question, create_at)
+            VALUES('$id_author', '$id_subject', '$exam_name', '$start', '$time', '$number_question', '$create_at')";
+            return $this->execute($sql);
+        }
+        //  UPDATE EXAM
+        public function UpdateExam($id, $id_author, $id_subject, $exam_name, $start, $time, $number_question, $create_at) {
+            $sql = "UPDATE tbl_exams 
+            SET id_author = '$id_author', id_subject = '$id_subject', exam_name = '$exam_name', start = '$start', time = '$time', number_question = '$number_question', create_at = '$create_at'
+            WHERE id = '$id'";
 
+            return $this->execute($sql);
+        }
         // DELETE
         public function DeleteData($id, $table) {
             $sql = "DELETE FROM $table WHERE id = '$id'";
