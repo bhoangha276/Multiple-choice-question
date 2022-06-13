@@ -3,7 +3,7 @@
 <div class="row">
     <form action="" method="GET" class="navbar-form navbar-left col-sm-12">
         <div class="input-group">
-            <input type="hidden" name="controller" value="user">
+            <input type="hidden" name="controller" value="class">
             <input type="text" value="" class="form-control" placeholder="Search class..." name="input">
             <span class="input-group-btn">
                 <button type="submit" class="btn btn-primary">
