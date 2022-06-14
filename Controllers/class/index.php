@@ -19,7 +19,7 @@
         }
 
         default: {
-            $id_user = 1;
+            $id_user = 2;
             $data = $db->getClassesByID($id_user);
 
             require_once('Views/classes/list-class.php');

@@ -56,7 +56,7 @@
 
         // LOGIN
         public function Login($username, $password) {
-            $sql = "SELECT * FROM tbl_users WHERE username = '$username' AND password = '$password'";
+            $sql = "SELECT * FROM tbl_users WHERE username = '$username' ";
             $this->execute($sql);
             
             if($this->num_rows()==0) {
