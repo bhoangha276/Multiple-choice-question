@@ -37,17 +37,26 @@
                 break;
             }    
 
+
+
+        
+       
         case 'edit': {
             if(isset($_GET['id'])) {
                 $id = $_GET['id'];
                 $tbl = "tbl_subjects";
                 $dataByID = $db->getDataByID($tbl, $id);
 
+               
+                $table = "tbl_classes";
+                $classes = $db->getAllData($table);
+
                 if(isset($_POST['update_subject'])) {
                     // View -> Data
-                    $id_class = $_POST['id_class'];
+                    $id_class = $_POST['id_class']; 
                     $subject_name = $_POST['subject_name'];
                     $description = $_POST['description'];
+
                     
 
                     // Data -> Model

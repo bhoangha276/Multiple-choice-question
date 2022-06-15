@@ -7,10 +7,25 @@
 <div class="modal-content">
     <div class="modal-body">
         <form class="modal-body" method="POST" action="">
-            <div class="form-group">
+            <label for="usr">Class name</label>
+            <select name="id_class">
+                <?php
+                    foreach($classes as $value) {
+                        ?>
+                            <option value="<?php echo $value['id']; ?>"
+                                <?php if($dataByID['id_class'] == $value['id']) { ?>
+                                    selected
+                                <?php } ?>>
+                                <?php echo $value['class_name']; ?>
+                            </option>
+                        <?php 
+                    }
+                ?>
+            </select>
+            <!-- <div class="form-group">
                 <label for="usr">Id Class</label>
                 <textarea type="text" class="form-control" placeholder="Input Id class..." rows="3" name="id_class" required><?php echo $dataByID['id_class']; ?></textarea>
-            </div>
+            </div> -->
             <div class="form-group">
                 
                 <label for="usr">Subject name</label>
