@@ -52,6 +52,9 @@
     <link rel="stylesheet" type="text/css" href="assets/vendors/revolution/css/settings.css">
     <link rel="stylesheet" type="text/css" href="assets/vendors/revolution/css/navigation.css">
     <!-- REVOLUTION SLIDER END -->
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" /> -->
+    <link href="assets/css/index.css" rel="stylesheet" />
 </head>
 
 <body id="bg">

@@ -117,6 +117,32 @@
             return $data;
         }
 
+        //GET EXAMS BY ID USER AND ID SUBJECT
+        public function getExamsByID($id_user, $id_subject) {
+            $sql = 
+            "SELECT
+
+            FROM
+
+            WHERE
+
+            ORDER BY tbl_exams.id DESC";
+            
+            $this->execute($sql);
+            
+            if($this->num_rows()==0) {
+                $data = 0;
+            }
+            else {
+                while($datas = $this->getData()) {
+                    $data[] = $datas;
+                }
+            }
+
+            return $data;
+        }
+
+
         // GET 1 DATA BY ID
         public function getDataByID($table, $id) {
             $sql = "SELECT * FROM $table WHERE id = '$id'";
