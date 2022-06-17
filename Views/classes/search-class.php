@@ -88,7 +88,7 @@
                 <div class="col-lg-9 col-md-8 col-sm-12">
                     <div class="row">
                         <?php
-                        foreach ($data as $value) {
+                        foreach ($data_Search as $value) {
                         ?>
                             <div class="col-md-6 col-lg-4 col-sm-6 m-b30">
                                 <div class="cours-bx">
