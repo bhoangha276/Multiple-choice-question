@@ -47,6 +47,9 @@
                 $tbl = "tbl_exams";
                 $dataByID = $db->getDataByID($tbl, $id);
 
+                $table = "tbl_subjects";
+                $subject = $db->getAllData($table);
+
                 if(isset($_POST['update_exam'])) {
                     // View -> Data
                     $id_author = $_POST['id_author'];

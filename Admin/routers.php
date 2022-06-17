@@ -25,10 +25,20 @@
 			    break;
 			}
 
-		case 'question': {
+		   	case 'question': {
 				require_once('Controllers/question/index.php');
 				break;
 			}
+			case 'result': {
+				require_once('Controllers/result/index.php');
+				break;
+			}
+
+			case 'personal': {
+				require_once('Controllers/personal/index.php');
+				break;
+			}
+			
 
 		default: {
 				require_once('Controllers/user/index.php');

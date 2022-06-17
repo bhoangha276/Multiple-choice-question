@@ -50,6 +50,12 @@
                         <li>
                             <a href="index.php?controller=question" class="ttr-material-button"><span class="ttr-label">Questions</span></a>
                         </li>
+                        <li>
+                            <a href="index.php?controller=result" class="ttr-material-button"><span class="ttr-label">Result</span></a>
+                        </li>
+                        <li>
+                            <a href="index.php?controller=personal" class="ttr-material-button"><span class="ttr-label">Personal Choice</span></a>
+                        </li>
                     </ul>
                 </li>
                 <!-- <li>

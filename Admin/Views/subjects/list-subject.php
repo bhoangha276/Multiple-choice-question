@@ -33,13 +33,22 @@
                 </tr>
             </thead>
             <tbody>
+                <?php
+             foreach($data_classes as $value) {
+               ?> 
+               
+                <td><?php echo $value['class_name']; ?></td>
+                <?php
+            }
+             ?>
+
             <?php
+            
                 $index = 1;
                 foreach($data as $value) {
             ?>
                 <tr>
                     <th><?php echo $index++; ?></th>
-                    <td><?php echo $value['id_class']; ?></td>
                     <td><?php echo $value['subject_name']; ?></td>
                     <td><?php echo $value['description']; ?></td>
                     <td>

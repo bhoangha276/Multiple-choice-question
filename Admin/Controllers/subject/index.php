@@ -25,7 +25,7 @@
                 require_once('Views/subjects/add-subject.php');
                 break;
             }
-        
+            
         case 'detail': {
             if(isset($_GET['id'])) {
                 $id = $_GET['id'];
@@ -109,6 +109,11 @@
         default: {
                 $table = "tbl_subjects";
                 $data = $db->getAllData($table);
+
+                $table_classes = "tbl_classes";
+                $data_classes = $db->getAllData($table_classes);
+
+                
 
                 require_once('Views/subjects/list-subject.php');
                 break;

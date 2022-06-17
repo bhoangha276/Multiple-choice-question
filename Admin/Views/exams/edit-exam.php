@@ -8,14 +8,22 @@
     <div class="modal-body">
         <form class="modal-body" method="POST" action="">
             <div class="form-group">
-                <label for="usr">Id Author</label>
-                <textarea type="text" class="form-control" placeholder="Id author..." rows="3" name="id_author" required><?php echo $dataByID['id_author']; ?></textarea>
-            </div>
-            <div class="form-group">
                 
                 <label for="usr">Id subject</label>
-                <textarea type="text" class="form-control" placeholder="Id subject..." rows="1" name="id_subject" required><?php echo $dataByID['id_subject']; ?></textarea>
-            </div>
+                <select name="id_subject">
+                <?php
+                    foreach($subject as $value) {
+                        ?>
+                            <option value="<?php echo $value['id']; ?>"
+                                <?php if($dataByID['id_subject'] == $value['id']) { ?>
+                                    selected
+                                <?php } ?>>
+                                <?php echo $value['subject_name']; ?>
+                            </option>
+                        <?php 
+                    }
+                ?>
+            </select>
             <div class="form-group">
              
                 <label for="usr">Exam name</label>
