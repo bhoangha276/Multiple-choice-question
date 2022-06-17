@@ -28,9 +28,9 @@
                             <div class="input-group">
                                 <input type="hidden" name="controller" value="class">
                                 <input type="text" name="key_word" class="form-control" placeholder="Search class...">
-                                <input type="submit" value="Search">
+                                <input type="submit" value="search">
                             </div>
-                            <input type="hidden" name="action" value="Search">
+                            <input type="hidden" name="action" value="search">
                         </form>
                     </div>
                     <div class="widget widget_archive">
