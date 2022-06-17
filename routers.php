@@ -14,6 +14,10 @@
                 require_once('Controllers/class/index.php');
                 break;
             }
+            case 'profile': {
+                require_once('Controllers/profile/index.php');
+                break;
+            }
 
             // case 'subject': {
             //     require_once('Controllers/subject/index.php');
