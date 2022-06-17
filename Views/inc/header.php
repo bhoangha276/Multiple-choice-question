@@ -66,6 +66,7 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="">Home</a></li>
                         <li class=""><a href="index.php?controller=class">Classroom</a></li>
+                        <li class=""><a href="index.php?controller=profile">Profile</a></li>
                     </ul>
                     <div class="nav-social-link">
                         <a href="javascript:;"><i class="fa fa-facebook"></i></a>
