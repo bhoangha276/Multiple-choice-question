@@ -34,8 +34,8 @@
 				break;
 			}
 
-			case 'personal': {
-				require_once('Controllers/personal/index.php');
+			case 'userchoice': {
+				require_once('Controllers/userchoice/index.php');
 				break;
 			}
 			

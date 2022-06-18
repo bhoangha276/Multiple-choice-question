@@ -54,7 +54,7 @@
                             <a href="index.php?controller=result" class="ttr-material-button"><span class="ttr-label">Result</span></a>
                         </li>
                         <li>
-                            <a href="index.php?controller=personal" class="ttr-material-button"><span class="ttr-label">Personal Choice</span></a>
+                            <a href="index.php?controller=userchoice" class="ttr-material-button"><span class="ttr-label">User Choice</span></a>
                         </li>
                     </ul>
                 </li>
