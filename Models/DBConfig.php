@@ -174,7 +174,7 @@ class Database
 
         return $this->execute($sql);
     }
-
+    
     // UPDATE
     public function UpdateData($table, $id, $params, $values)
     {

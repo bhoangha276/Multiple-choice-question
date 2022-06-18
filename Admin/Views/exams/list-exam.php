@@ -27,7 +27,8 @@
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Id subject</th>
+                    <th>Name</th>
+                    <th>Subject name</th>
                     <th>Exam name</th>
                     <th>start</th>
                     <th>time</th>
@@ -42,7 +43,8 @@
             ?>
                 <tr>
                     <th><?php echo $index++; ?></th>
-                    <td><?php echo $value['id_subject']; ?></td>
+                    <td><?php echo $value['username']; ?></td>
+                    <td><?php echo $value['subject_name']; ?></td>
                     <td><?php echo $value['exam_name']; ?></td>
                     <td><?php echo $value['start']; ?></td>
                     <td><?php echo $value['time']; ?></td>

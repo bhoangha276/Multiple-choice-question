@@ -109,8 +109,9 @@
             } 
 
         default: {
-                $table = "tbl_exams";
-                $data = $db->getAllData($table);
+                
+                $data = $db->getExams();
+
 
                 require_once('Views/exams/list-exam.php');
                 break;

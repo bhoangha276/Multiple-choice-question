@@ -17,9 +17,9 @@
                 if(isset($_GET['input'])) {
                     $input = $_GET['input'];
                     $tbl = "tbl_results";
-                    $col = "id_user";
+                    $col = "number_correct";
 
-                    $data_Search = $db->SearchData($tbl, $col, $input);
+                    $data_Search = $db->getResults  ($tbl, $col, $input);
                 }
 
                 require_once('Views/results/search-result.php');
@@ -27,8 +27,8 @@
             } 
 
         default: {
-                $table = "tbl_results";
-                $data = $db->getAllData($table);
+               
+                $data = $db->getResults();
 
                 require_once('Views/results/list-result.php');
                 break;
