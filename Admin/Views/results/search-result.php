@@ -22,8 +22,8 @@
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Id user</th>
-                    <th>id_exam</th>
+                    <th>Username</th>
+                    <th>Exam name</th>
                     <th>Number Correct</th>
                     <th>Mark</th>
                 </tr>
@@ -35,8 +35,8 @@
             ?>
                 <tr>
                     <th><?php echo $index++; ?></th>
-                    <td><?php echo $value['id_user']; ?></td>
-                    <td><?php echo $value['id_exam']; ?></td>
+                    <td><?php echo $value['username']; ?></td>
+                    <td><?php echo $value['exam_name']; ?></td>
                     <td><?php echo $value['number_correct']; ?></td>
                     <td><?php echo $value['mark']; ?></td>
                 </tr>

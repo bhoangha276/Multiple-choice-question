@@ -89,6 +89,76 @@
             return $data;
         }
 
+        //GET CLASSES & SUBJECT
+        public function getClassesSubject() {
+            $sql = "SELECT tbl_classes.class_name, tbl_subjects.subject_name, tbl_subjects.description, tbl_subjects.image FROM
+            `tbl_subjects`,
+            `tbl_classes`
+        WHERE
+            tbl_subjects.id_class = tbl_classes.id
+        ORDER BY tbl_subjects.id DESC";
+
+            $this->execute($sql);
+            if($this->num_rows()==0) {
+                $data = 0;
+            }
+            else {
+                while($datas = $this->getData()) {
+                    $data[] = $datas;
+                }
+            }
+
+            return $data;
+        }
+        //GET EXAM, USERS, SUBJECT
+        public function getExams() {
+            $sql = "SELECT tbl_users.username, tbl_subjects.subject_name, tbl_exams.exam_name, tbl_exams.start, tbl_exams.time, tbl_exams.number_question, tbl_exams.create_at FROM
+            `tbl_subjects`,
+            `tbl_users`,
+            `tbl_exams`
+        WHERE
+            tbl_exams.id_author = tbl_users.id AND
+            tbl_exams.id_subject = tbl_subjects.id
+        ORDER BY tbl_exams.id DESC";
+
+            $this->execute($sql);
+            if($this->num_rows()==0) {
+                $data = 0;
+            }
+            else {
+                while($datas = $this->getData()) {
+                    $data[] = $datas;
+                }
+            }
+
+            return $data;
+        }
+
+        //GET RESULTS, USERS, EXAMS
+        public function getResults() {
+            $sql = "SELECT tbl_users.username, tbl_exams.exam_name, tbl_results.number_correct, tbl_results.mark FROM
+            `tbl_results`,
+            `tbl_users`,
+            `tbl_exams`
+        WHERE
+            tbl_results.id_user = tbl_users.id AND
+            tbl_results.id_exam = tbl_exams.id
+        ORDER BY tbl_results.id DESC";
+
+            $this->execute($sql);
+            if($this->num_rows()==0) {
+                $data = 0;
+            }
+            else {
+                while($datas = $this->getData()) {
+                    $data[] = $datas;
+                }
+            }
+
+            return $data;
+        }
+
+
         // GET DATA BY ID
         public function getDataByID($table, $id) {
             $sql = "SELECT * FROM $table WHERE id = '$id'";

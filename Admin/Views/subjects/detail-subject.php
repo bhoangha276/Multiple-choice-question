@@ -10,7 +10,7 @@
             <div class="form-group">
                 
                 <label for="usr">Id class</label>
-                <h5 class="form-control" name="id_class"><?php echo $dataByID['id_class']; ?></h5>
+                <h5 class="form-control" name="id_class"><?php echo $dataByID['class_name']; ?></h5>
             </div>
             <div class="form-group">
                

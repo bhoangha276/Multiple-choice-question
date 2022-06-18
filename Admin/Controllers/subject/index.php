@@ -110,8 +110,8 @@
                 $table = "tbl_subjects";
                 $data = $db->getAllData($table);
 
-                $table_classes = "tbl_classes";
-                $data_classes = $db->getAllData($table_classes);
+                
+                $data = $db->getClassesSubject();
 
                 
 
