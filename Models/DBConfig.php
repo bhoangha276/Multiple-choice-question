@@ -200,15 +200,18 @@ class Database
         return $data;
     }
     // GET RANDOM QUESTION
-    public function getRandomQuestion($id, $limit)
+    public function getRandomQuestion($id_exam, $limit)
     {
-        $sql = "SELECT * FROM tbl_questions WHERE idExam = '$id' ORDER BY RAND() LIMIT $limit";
+        $sql = "SELECT * FROM `tbl_questions` WHERE tbl_questions.id_exam = $id_exam ORDER BY RAND() LIMIT $limit";
+            
         $this->execute($sql);
 
-        if ($this->num_rows() != 0) {
-            $data = mysqli_fetch_array($this->result);
-        } else {
+        if ($this->num_rows() == 0) {
             $data = 0;
+        } else {
+            while ($datas = $this->getData()) {
+                $data[] = $datas;
+            }
         }
 
         return $data;

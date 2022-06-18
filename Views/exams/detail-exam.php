@@ -25,8 +25,15 @@
             <div class="container mb-5">
                 <h5 class="card-header">Exam</h5>
                 <div class="row mt-5">
-                    <div class="col-12">
-                        <p class="fw-bold">1. Which of the following sentences is correct</p>
+                    <?php
+                    $index = 1;
+                    foreach($dataByID as $value){
+                    ?>
+                        <div class="col-12">
+                        <p class="fw-bold mt-5">
+                            Question <?php echo $index++; ?>: 
+                            <?php echo $value['question'] ?>
+                        </p>
                         <div>
                             <input type="radio" name="box" id="one" />
                             <input type="radio" name="box" id="two" />
@@ -36,8 +43,7 @@
                                 <div class="course">
                                     <span class="circle"></span>
                                     <span class="subject">
-                                        When its raining ,people's umbrella are all you're going to
-                                        see from above
+                                        <?php echo $value['option_a'] ?>
                                     </span>
                                 </div>
                             </label>
@@ -45,8 +51,7 @@
                                 <div class="course">
                                     <span class="circle"></span>
                                     <span class="subject">
-                                        When its raining,people's umbrella are all your going to see
-                                        from above
+                                        <?php echo $value['option_b'] ?>
                                     </span>
                                 </div>
                             </label>
@@ -54,67 +59,26 @@
                                 <div class="course">
                                     <span class="circle"></span>
                                     <span class="subject">
-                                        When its raining,peoples umbrella's are all you're going to
-                                        see from above
+                                        <?php echo $value['option_c'] ?>
                                     </span>
                                 </div>
                             </label>
                             <label for="four" class="box forth">
                                 <div class="course">
                                     <span class="circle"></span>
-                                    <span class="subject"> None of the above </span>
+                                    <span class="subject">
+                                        <?php echo $value['option_d'] ?>
+                                    </span>
                                 </div>
                             </label>
                         </div>
                     </div>
-                    <div class="col-12">
-                        <p class="fw-bold mt-5">
-                            2. Complete the following sentences:Alice couldn't _______ the
-                            humilation any longer and stormed out of the room red as a bed
-                        </p>
-                        <div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="radio" name="box" id="five" />
-                                    <label for="five" class="box fifth w-100">
-                                        <div class="course">
-                                            <span class="circle"></span> <span class="subject">is</span>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="radio" name="box" id="six" />
-                                    <label for="six" class="box sixth w-100">
-                                        <div class="course">
-                                            <span class="circle"></span>
-                                            <span class="subject"> was </span>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="radio" name="box" id="seven" />
-                                    <label for="seven" class="box seveth w-100">
-                                        <div class="course">
-                                            <span class="circle"></span>
-                                            <span class="subject"> will </span>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="radio" name="box" id="eight" />
-                                    <label for="eight" class="box eighth w-100">
-                                        <div class="course">
-                                            <span class="circle"></span>
-                                            <span class="subject"> None of the above </span>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                    }
+                    ?>
                     <div class="col-12">
                         <div class="d-flex justify-content-center">
-                            <button class="btn btn-primary px-4 py-2 fw-bold">continue</button>
+                            <button class="btn btn-primary px-4 py-2 fw-bold">Done</button>
                         </div>
                     </div>
                 </div>
