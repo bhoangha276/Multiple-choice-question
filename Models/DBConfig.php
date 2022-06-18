@@ -124,12 +124,17 @@ class Database
     {
         $sql =
             "SELECT
-
-            FROM
-
-            WHERE
-
-            ORDER BY tbl_exams.id DESC";
+            tbl_exams.id, tbl_exams.id_author, tbl_exams.id_subject, tbl_exams.exam_name, tbl_exams.start, tbl_exams.time, tbl_exams.number_question, tbl_exams.create_at
+        FROM
+            `tbl_exams`,
+            `tbl_subjects`,
+            `tbl_classes`,
+            `tbl_users`
+        WHERE
+            tbl_exams.id_subject = $id_subject AND tbl_subjects.id_class = tbl_classes.id AND tbl_classes.id_author = $id_user
+        GROUP BY tbl_exams.id
+        ORDER BY tbl_exams.id DESC
+            ";
 
         $this->execute($sql);
 
