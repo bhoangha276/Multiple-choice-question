@@ -27,8 +27,7 @@
                         <form action="" method="GET" class="navbar-form navbar-left col-sm-12">
                             <div class="input-group">
                                 <input type="hidden" name="controller" value="class">
-                                <input type="text" name="key_word" class="form-control" placeholder="Search class...">
-                                <input type="submit" value="search">
+                                <input type="text" name="key_word" class="form-control" placeholder="Search class..." >
                             </div>
                             <input type="hidden" name="action" value="search">
                         </form>

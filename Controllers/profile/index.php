@@ -23,9 +23,9 @@ switch ($action) {
             $table =  "tbl_users";
             $data = $db->getDataByID($table, $id);
 
-            $table_class = "tbl_classes";
-            $data_class = $db->getDataByID($table_class, $id);
+            $data_class = $db->getClassesByID($id);
 
+         
             require_once('Views/profile/index.php');
             break;
         }
