@@ -13,8 +13,15 @@ if (isset($_GET['action'])) {
 $thanhcong = array();
 
 switch ($action) {
-    case 'add': {
-            require_once('Views/users/add-user.php');
+    case 'list-class': {
+            $id = 2;
+
+            $table =  "tbl_users";
+            $data = $db->getDataByID($table, $id);
+
+            $data_class = $db->getClassesByID($id);
+
+            require_once('Views/profiles/list-class-profile.php');
             break;
         }
     default: {
@@ -24,9 +31,8 @@ switch ($action) {
             $data = $db->getDataByID($table, $id);
 
             $data_class = $db->getClassesByID($id);
-
          
-            require_once('Views/profile/index.php');
+            require_once('Views/profiles/index.php');
             break;
         }
 }

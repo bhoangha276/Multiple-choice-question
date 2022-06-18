@@ -202,7 +202,16 @@ class Database
     // GET RANDOM QUESTION
     public function getRandomQuestion($id_exam, $limit)
     {
-        $sql = "SELECT * FROM `tbl_questions` WHERE tbl_questions.id_exam = $id_exam ORDER BY RAND() LIMIT $limit";
+        $sql = 
+        "SELECT *
+            FROM
+                `tbl_questions`,
+                `tbl_exams_details`
+            WHERE
+                tbl_exams_details.id_question = tbl_questions.id AND tbl_exams_details.id_exam = $id_exam
+            ORDER BY
+                RAND()
+            LIMIT $limit";
             
         $this->execute($sql);
 
