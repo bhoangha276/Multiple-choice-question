@@ -48,7 +48,7 @@
                                          <a class="nav-link active" data-toggle="tab" href="#courses"><i class="ti-book"></i>Courses</a>
                                      </li>
                                      <li class="nav-item">
-                                         <a class="nav-link" data-toggle="tab" href="#quiz-results"><i class="ti-bookmark-alt"></i>Quiz Results </a>
+                                         <a class="nav-link" data-toggle="tab" href="#quiz-results"><i class="ti-bookmark-alt"></i>My Class </a>
                                      </li>
                                      <li class="nav-item">
                                          <a class="nav-link" data-toggle="tab" href="#edit-profile"><i class="ti-pencil-alt"></i>Edit Profile</a>
@@ -84,94 +84,53 @@
                                          </div>
                                      </div>
                                      <div class="courses-filter">
-                                         <div class="clearfix">
-                                             <ul id="masonry" class="ttr-gallery-listing magnific-image row">
-                                                 <li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 publish">
-                                                 </li>
-                                                 <li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 pending">
-                                                     <div class="cours-bx">
-                                                         <div class="action-box">
-                                                             <img src="assets/images/courses/pic2.jpg" alt="">
-                                                             <a href="#" class="btn">Read More</a>
-                                                         </div>
-                                                         <div class="info-bx text-center">
-                                                             <h5><a href="#"><?php echo $data_class['class_name']; ?></a></h5>
-                                                             <span><?php echo $data_class['description']; ?></span>
-                                                         </div>
-                                                         <div class="cours-more-info">
-                                                             <div class="review">
-                                                                 <span>3 Review</span>
-                                                                 <ul class="cours-star">
-                                                                     <li class="active"><i class="fa fa-star"></i></li>
-                                                                     <li class="active"><i class="fa fa-star"></i></li>
-                                                                     <li class="active"><i class="fa fa-star"></i></li>
-                                                                     <li><i class="fa fa-star"></i></li>
-                                                                     <li><i class="fa fa-star"></i></li>
-                                                                 </ul>
+                                         <?php
+                                            foreach ($data_class as $value) {
+                                            ?>
+                                             <div class="clearfix">
+                                                 <ul id="masonry" class="ttr-gallery-listing magnific-image row">
+                                                     <li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 publish">
+                                                     </li>
+                                                     <li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 pending">
+                                                         <div class="cours-bx">
+                                                             <div class="action-box">
+                                                                 <img src="assets/images/courses/pic2.jpg" alt="">
+                                                                 <a href="#" class="btn">Read More</a>
                                                              </div>
-                                                             <div class="price">
-                                                                 <del>$190</del>
-                                                                 <h5>$120</h5>
+                                                             <div class="info-bx text-center">
+                                                                 <h5><a href="#"><?php echo $value['class_name']; ?></a></h5>
+                                                                 <span><?php echo $value['description']; ?></span>
+                                                             </div>
+                                                             <div class="cours-more-info">
+                                                                 <div class="review">
+                                                                     <span>3 Review</span>
+                                                                     <ul class="cours-star">
+                                                                         <li class="active"><i class="fa fa-star"></i></li>
+                                                                         <li class="active"><i class="fa fa-star"></i></li>
+                                                                         <li class="active"><i class="fa fa-star"></i></li>
+                                                                         <li><i class="fa fa-star"></i></li>
+                                                                         <li><i class="fa fa-star"></i></li>
+                                                                     </ul>
+                                                                 </div>
+                                                                 <div class="price">
+                                                                     <del>$190</del>
+                                                                     <h5>$120</h5>
+                                                                 </div>
                                                              </div>
                                                          </div>
-                                                     </div>
-                                                 </li>
-                                             </ul>
-                                         </div>
+                                                     </li>
+                                                 </ul>
+                                             </div>
+                                         <?php
+                                            }
+                                            ?>
                                      </div>
                                  </div>
                                  <div class="tab-pane" id="quiz-results">
                                      <div class="profile-head">
-                                         <h3>Quiz Results</h3>
+                                         <h3>My class</h3>
                                      </div>
-                                     <div class="courses-filter">
-                                         <div class="row">
-                                             <div class="col-md-6 col-lg-6">
-                                                 <ul class="course-features">
-                                                     <li><i class="ti-book"></i> <span class="label">Lectures</span>
-                                                         <span class="value">8</span>
-                                                     </li>
-                                                     <li><i class="ti-help-alt"></i> <span class="label">Quizzes</span>
-                                                         <span class="value">1</span>
-                                                     </li>
-                                                     <li><i class="ti-time"></i> <span class="label">Duration</span>
-                                                         <span class="value">60 hours</span>
-                                                     </li>
-                                                     <li><i class="ti-stats-up"></i> <span class="label">Skill
-                                                             level</span> <span class="value">Beginner</span></li>
-                                                     <li><i class="ti-smallcap"></i> <span class="label">Language</span>
-                                                         <span class="value">English</span>
-                                                     </li>
-                                                     <li><i class="ti-user"></i> <span class="label">Students</span>
-                                                         <span class="value">32</span>
-                                                     </li>
-                                                     <li><i class="ti-check-box"></i> <span class="label">Assessments</span> <span class="value">Yes</span></li>
-                                                 </ul>
-                                             </div>
-                                             <div class="col-md-6 col-lg-6">
-                                                 <ul class="course-features">
-                                                     <li><i class="ti-book"></i> <span class="label">Lectures</span>
-                                                         <span class="value">8</span>
-                                                     </li>
-                                                     <li><i class="ti-help-alt"></i> <span class="label">Quizzes</span>
-                                                         <span class="value">1</span>
-                                                     </li>
-                                                     <li><i class="ti-time"></i> <span class="label">Duration</span>
-                                                         <span class="value">60 hours</span>
-                                                     </li>
-                                                     <li><i class="ti-stats-up"></i> <span class="label">Skill
-                                                             level</span> <span class="value">Beginner</span></li>
-                                                     <li><i class="ti-smallcap"></i> <span class="label">Language</span>
-                                                         <span class="value">English</span>
-                                                     </li>
-                                                     <li><i class="ti-user"></i> <span class="label">Students</span>
-                                                         <span class="value">32</span>
-                                                     </li>
-                                                     <li><i class="ti-check-box"></i> <span class="label">Assessments</span> <span class="value">Yes</span></li>
-                                                 </ul>
-                                             </div>
-                                         </div>
-                                     </div>
+                                   
                                  </div>
                                  <div class="tab-pane" id="edit-profile">
                                      <div class="profile-head">
