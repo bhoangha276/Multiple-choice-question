@@ -26,7 +26,7 @@ switch ($action) {
             $data_class = $db->getClassesByID($id);
 
          
-            require_once('Views/profile/index.php');
+            require_once('Views/profiles/list-class-profile.php');
             break;
         }
 }
