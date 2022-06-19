@@ -175,6 +175,33 @@ class Database
         return $data;
     }
 
+    //GET RESULTS BY ID USER AND ID EXAM
+    public function getReultsByID($id_user, $id_exam)
+    {
+        $sql =
+            "SELECT
+                *
+            FROM
+                `tbl_results`
+            WHERE
+                tbl_results.id_user = $id_user AND tbl_results.id_exam = $id_exam
+            ORDER BY
+                tbl_results.id
+            DESC
+            ";
+
+        $this->execute($sql);
+
+        if ($this->num_rows() == 0) {
+            $data = 0;
+        } else {
+            while ($datas = $this->getData()) {
+                $data[] = $datas;
+            }
+        }
+
+        return $data;
+    }
 
     // GET 1 DATA BY ID
     public function getDataByID($table, $id)

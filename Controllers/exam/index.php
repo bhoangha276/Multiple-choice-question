@@ -25,8 +25,17 @@
             break;
         }
 
-        case 'answer': {
-            require_once('Views/exams/answer-exam.php');
+        case 'mark': {
+            if(isset($_GET['id'])) {
+                $id_exam = $_GET['id'];
+                $table = 'tbl_exams';
+                $id_user = 2;
+
+                $dataExamByID = $db->getDataByID($table ,$id_exam);
+                $dataResultByID = $db->getReultsByID($id_user ,$id_exam);
+            }
+
+            require_once('Views/exams/mark-exam.php');
             break;
         }
 

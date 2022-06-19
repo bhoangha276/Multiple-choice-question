@@ -28,8 +28,8 @@
                 }
             require_once('Views/login/register.php');
             break;
+            }
         }
-
 
         default: {
             if(isset($_POST['login'])) {
