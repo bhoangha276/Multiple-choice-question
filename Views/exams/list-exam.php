@@ -65,7 +65,7 @@
 											<!-- <li><a href="#"><i class="fa fa-map-marker"></i> Berlin, Germany</a></li> -->
 										</ul>
 										<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the..</p> -->
-										<a href="index.php?controller=exam&action=detail&id=<?php echo $value['id']; ?>" class="btn btn-sm btn-primary btn-toastr"><i class="ti-pencil-alt"></i> Start</a>
+										<a onclick="return confirm('Start exam #'+ '<?php echo $value['exam_name']; ?>'+'#?')" href="index.php?controller=exam&action=detail&id=<?php echo $value['id']; ?>" class="btn btn-sm btn-primary btn-toastr"><i class="ti-pencil-alt"></i> Start</a>
 									</div>
 								</div>
 							</div>
