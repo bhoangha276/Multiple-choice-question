@@ -33,8 +33,11 @@
         default: {
             $id_user = 2;
 
-            $id_subject = 1;
-            $data = $db->getExamsByID($id_user, $id_subject);
+            if(isset($_GET['id'])) {
+                $id_subject = $_GET['id'];
+
+                $data = $db->getExamsByID($id_user, $id_subject);
+            }
 
             require_once('Views/exams/list-exam.php');
             break;

@@ -70,7 +70,7 @@
                                 <div class="cours-bx">
                                     <div class="action-box">
                                         <img src="assets/images/courses/pic1.jpg" alt="">
-                                        <a href="#" class="btn">Enter</a>
+                                        <a href="index.php?controller=subject&id=<?php echo $value['id']; ?>" class="btn">Enter</a>
                                     </div>
                                     <div class="info-bx text-center">
                                         <h5><a href="#"><?php echo $value['class_name']; ?></a></h5>

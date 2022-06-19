@@ -119,6 +119,32 @@ class Database
         return $data;
     }
 
+        // GET SUBJECTS BY ID USER
+        public function getSubjectsByID($id_class)
+        {
+            $sql =
+            "SELECT
+                *
+            FROM
+                `tbl_subjects`
+            WHERE
+                tbl_subjects.id_class = $id_class
+            ORDER BY 
+                tbl_subjects.id DESC";
+
+        $this->execute($sql);
+
+        if ($this->num_rows() == 0) {
+            $data = 0;
+        } else {
+            while ($datas = $this->getData()) {
+                $data[] = $datas;
+            }
+        }
+
+        return $data;
+        }
+
     //GET EXAMS BY ID USER AND ID SUBJECT
     public function getExamsByID($id_user, $id_subject)
     {

@@ -19,10 +19,10 @@
                 break;
             }
 
-            // case 'subject': {
-            //     require_once('Controllers/subject/index.php');
-            //     break;
-            // }
+            case 'subject': {
+                require_once('Controllers/subject/index.php');
+                break;
+            }
 
             case 'exam': {
                 require_once('Controllers/exam/index.php');
