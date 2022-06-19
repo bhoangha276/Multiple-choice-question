@@ -61,6 +61,7 @@
                          </div>
                      </div>
                 <div class="col-lg-9 col-md-8 col-sm-12">
+                    <h3>My Courses</h3>
                     <div class="row">
                         <?php
                         foreach ($data_class as $value) {

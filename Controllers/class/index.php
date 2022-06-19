@@ -27,8 +27,8 @@
         } 
 
         default: {
-            $id_user = 2;
-            $data = $db->getClassesByID($id_user);
+            $table = "tbl_classes";
+            $data = $db->getAllData($table);
             
             require_once('Views/classes/list-class.php');
             break;

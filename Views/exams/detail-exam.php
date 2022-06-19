@@ -37,10 +37,10 @@
                             <div id="quizpage">
                                 <form name="quiz" id="quiz">
                                     <div class="quest">
-                                        <p><input type="radio" name="q1" value="1"><?php echo $value['option_a'] ?></p>
-                                        <p><input type="radio" name="q1" value="2"><?php echo $value['option_b'] ?></p>
-                                        <p><input type="radio" name="q1" value="3"><?php echo $value['option_c'] ?></p>
-                                        <p><input type="radio" name="q1" value="4"><?php echo $value['option_d'] ?></p>
+                                        <p><input type="radio" name="q1" value="1"> <?php echo $value['option_a'] ?></p>
+                                        <p><input type="radio" name="q1" value="2"> <?php echo $value['option_b'] ?></p>
+                                        <p><input type="radio" name="q1" value="3"> <?php echo $value['option_c'] ?></p>
+                                        <p><input type="radio" name="q1" value="4"> <?php echo $value['option_d'] ?></p>
                                     </div>
                                 </form>
                             </div>

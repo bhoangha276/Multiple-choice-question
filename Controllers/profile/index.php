@@ -13,7 +13,7 @@ if (isset($_GET['action'])) {
 $thanhcong = array();
 
 switch ($action) {
-    case 'list-class': {
+    case 'list-class-profile': {
             $id = 2;
 
             $table =  "tbl_users";
